@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <!DOCTYPE html>
 
@@ -20,9 +21,53 @@
         
     </nav>
     <section id="main-content">
+    <h1>Recipes</h1>
+    <table id="recipeTable">
+    <tr>
+		<th>&nbsp;</th>
+		<c:forEach items= "${recipes}" var="recipe">
+		<td><img src="img/recipe${recipe.recipeId}.jpg" class="recipeImage"/></td>
+		</c:forEach>
+		</tr>
+		<tr class="greyed">
+    <th>Name</th>
+    <c:forEach items="${recipes}" var="recipe" >
+		<td><c:out value="${recipe.name}" /></td>
+		</c:forEach>
+		</tr>
+		<tr>
+		<th>Type</th>
+	  <c:forEach items="${recipes}" var="recipe" >
+		<td><c:out value="${recipe.recipeType}" /></td>
+		</c:forEach>
+		</tr>
+		<tr class="greyed">
+		<th>Cook Time</th>
+		<c:forEach items="${recipes}" var="recipe" >
+		<td><c:out value="${recipe.cookTimeInMinutes}" />min</td>
+		</c:forEach>
+		</tr>
+		<tr>
+		<th>Ingredients</th>
+		<c:forEach items="${recipes}" var="recipe" >
+		<td><c:out value="${recipe.ingredients.size()}" /> Ingredients </td>
+		</c:forEach>
+		</tr>
+		<tr class="greyed">
+    <th>Rating</th>
+    <c:forEach items="${recipes}" var="recipe" >
+		<td><fmt:formatNumber maxFractionDigits="0" value="${recipe.averageRating}" var="formattedRating"/>
+		<img src="img/${formattedRating}-star.png" class ="rating"/>
+		</td>
+		</c:forEach>
+		</tr>
+		
+		
+		</table>
 
+		
        <!-- Use the request attribute "recipes" (List<Recipe>) -->
-
+		
     </section>
 </body>
 </html>

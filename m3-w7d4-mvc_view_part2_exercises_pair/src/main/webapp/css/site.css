@@ -56,3 +56,55 @@ section {
 	background-color: #FFF;
 	border-radius: 7px;
 }
+
+
+img.rating {
+	width: 100px;
+}
+img.recipeImage{
+	width: 100%;
+	}
+tr.greyed {
+	background-color: #d9d9d9;
+}
+tr.greyed >th {
+	background: white;
+}
+#recipeTable {
+	-webkit-column-width: 300px;
+}
+
+.recipeTiles {
+	display: inline-grid;
+	max-width: 31%;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 2fr .7fr .3fr;
+	background-color: #d9d9d9;
+	border-radius:10%;
+	margin:.5em;
+}
+
+.recipeImage {
+	grid-column: 1/4;
+	border-radius:10% 10% 0% 0%;
+}
+
+.recipeName {
+	grid-column: 1/4;
+	grid-row: 2/3;
+	background-color: #d9d9d9;
+}
+
+.ingredients {
+	grid-column: 3/4;
+	grid-row: 3/4;
+	
+}
+
+.stars {
+	grid-column: 1/2;
+	grid-row: 3/4;
+	width: 8em;
+	
+}
+ 
