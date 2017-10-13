@@ -57,6 +57,56 @@ section {
 	border-radius: 7px;
 }
 
+ .recipeCard {
+	display: grid;
+	grid-template-columns: 30% 70%;
+	grid-template-rows: 2em 2em 2em 1fr 45% 25\0%;
+	border-radius:10%;
+	margin:.5em;
+ }
+.recipeCardImage{
+	grid-column: 1/2;
+	grid-row: 1/5;
+	max-width: 300px;
+	}	
+	
+.recipeCardName{
+	grid-column: 2/3;
+	grid-row: 1/2;
+	text-align: start;
+	}
+	
+.recipeCardType{
+	grid-column: 2/3;
+	grid-row: 2/3;
+	text-align: start;
+	}
+	
+.recipeCardCookTimeInMinutes{
+	grid-column: 2/3;
+	grid-row: 3/4;
+	text-align: start;
+	}
+	
+.recipeCardDescription{
+	grid-column: 2/3;
+	grid-row: 4/5;
+	text-align: justify;
+	}
+	
+.recipeCardIngredients{
+	grid-column: 1/3;
+	grid-row: 5/6;
+	text-align: start;
+	}
+	
+.recipeCardPreparationSteps{
+	
+	grid-column: 1/-1;
+	grid-row: 6/7;
+	text-align: start;
+	grid-auto-flow: dense;
+	}
 
 img.rating {
 	width: 100px;
@@ -70,8 +120,10 @@ tr.greyed {
 tr.greyed >th {
 	background: white;
 }
+
 #recipeTable {
 	-webkit-column-width: 300px;
+	column-width: 300px;
 }
 
 .recipeTiles {
@@ -84,15 +136,19 @@ tr.greyed >th {
 	margin:.5em;
 }
 
-.recipeImage {
+.recipeTileImage {
 	grid-column: 1/4;
 	border-radius:10% 10% 0% 0%;
+	max-width: 100%;
+	height: auto;
+	object-fit: contain;
 }
 
 .recipeName {
 	grid-column: 1/4;
 	grid-row: 2/3;
 	background-color: #d9d9d9;
+	font-size: 1.5em;
 }
 
 .ingredients {
@@ -107,4 +163,3 @@ tr.greyed >th {
 	width: 8em;
 	
 }
- 
