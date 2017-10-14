@@ -4,12 +4,12 @@
  <h1>Recipes</h1>
 		
 		<c:forEach items= "${recipes}" var="recipe">
-		<div class="recipeTiles">
+		<div id="recipeTiles">
 		<a  href="recipeDetails?recipeId=${recipe.recipeId }"> <img src="img/recipe${recipe.recipeId}.jpg" class="recipeTileImage"/></a>
 
-		<h1 class="recipeName"><c:out value="${recipe.name}"/></h1>
+		<p class="recipeName"><c:out value="${recipe.name}"/></p>
 	
-		<h5 class="ingredients"><c:out value="${recipe.ingredients.size()}" /> Ingredients </h5>
+		<p class="ingredients"><c:out value="${recipe.ingredients.size()}" /> Ingredients </p>
 
 		<fmt:formatNumber maxFractionDigits="0" value="${recipe.averageRating}" var="formattedRating"/>
 		<img src="img/${formattedRating}-star.png" class ="stars"/>

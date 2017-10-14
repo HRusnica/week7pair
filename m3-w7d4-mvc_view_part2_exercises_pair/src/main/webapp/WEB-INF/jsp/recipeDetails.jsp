@@ -4,7 +4,7 @@
  <h1>Recipes</h1>
 		
 		
-		<div class="recipeCard">
+		<div id="recipeCard">
 		<img src="img/recipe${recipe.recipeId}.jpg" class="recipeCardImage"/>
 		<h1 class="recipeCardName"><c:out value="${recipe.name}"/></h1>
 		<p class="recipeCardType"><c:out value="${recipe.recipeType}"/></p>
@@ -16,9 +16,11 @@
 		<c:forEach items="${recipe.ingredients }" var="ingredient">
 		<li><c:out value="${ingredient.quantity }" /><c:out value="${ingredient.name}" /></li>
 		</c:forEach>
+		<br>______________________________________________________________________________________________________________________</br>
+		
 		</ul>
 		</div>
-		<div class="recipeCardPreparation">
+		<div class="recipeCardPreparationSteps">
 		<h3><strong>Preparation</strong></h3>
 		<ol>
 		<c:forEach items="${recipe.preparationSteps }" var="step">
