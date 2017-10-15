@@ -130,38 +130,38 @@ tr.greyed >th {
 #recipeTiles {
 	display: inline-grid;
 	max-width: 31%;
-	grid-template-columns: 2fr 1fr 2fr;
+	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 4fr 2fr 1fr;
 	background-color: #d9d9d9;
 	border-radius:10%;
-	margin:.5em;
+	
 }
 
 .recipeTileImage {
-	grid-column: 1/4;
+	grid-column: 1/3;
+	grid-row:1/2;
 	border-radius:10% 10% 0% 0%;
-	max-width:auto;
-	height: 250px;
+	width: 200%;
 	
 }
 
 .recipeName {
-	grid-column: 1/4;
+	grid-column: 1/3;
 	grid-row: 2/3;
 	background-color: #d9d9d9;
 	font-size: 1.5em;
 	text-align: justified;
+	width: 100%;
 }
 
 .ingredients {
-	grid-column: 3/4;
+	grid-column: 2/3;
 	grid-row: 3/4;
-	
+	width: 10em;
+	text-align:end;
 }
-
 .stars {
 	grid-column: 1/2;
 	grid-row: 3/4;
-	width: 5em;
-	
+	width: 8em;
 }
