@@ -165,3 +165,7 @@ tr.greyed >th {
 	grid-row: 3/4;
 	width: 8em;
 }
+.noPad{
+	padding:0em;
+	margin:.5em;
+}

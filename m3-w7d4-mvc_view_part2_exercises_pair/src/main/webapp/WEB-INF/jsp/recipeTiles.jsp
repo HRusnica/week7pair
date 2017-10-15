@@ -1,8 +1,8 @@
 <%@ include file ="common/header.jspf" %>
     <section id="main-content">
     	
- <h1>Recipes</h1>
-		
+ <h1 class="noPad">Recipes</h1>
+ <p class="noPad">click on image for more details</p>		
 		<c:forEach items= "${recipes}" var="recipe">
 		<div id="recipeTiles">
 		<a  href="recipeDetails?recipeId=${recipe.recipeId }"> <img src="img/recipe${recipe.recipeId}.jpg" class="recipeTileImage"/></a>

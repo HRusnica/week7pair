@@ -1,6 +1,7 @@
 <%@ include file ="common/header.jspf" %>
     <section id="main-content">
-    <h1>Recipes</h1>
+    <h1 class ="noPad">Recipes</h1>
+    <p class="noPad">click on image for more details</p>
     <table id="recipeTable">
     <tr>
 		<th>&nbsp;</th>
